@@ -15,11 +15,6 @@ const getDate = () => {
 	return `${date.getMonth()}/${date.getDate()}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
 };
 const argv = yargs
-	.option("filepath", {
-		alias: "fp",
-		description: "filePath, ex. test.js OR src/test.js",
-		type: "string",
-	})
 	.option("password", {
 		alias: "pass",
 		description: "password for remote connecting",
@@ -34,9 +29,7 @@ const argv = yargs
 	.alias("help", "h").argv;
 
 if (!argv._.length) {
-	console.log(
-		chalk.redBright("Please provide --filepath. Ex. --filepath index.js")
-	);
+	console.log(chalk.redBright("Please provide filepath. Ex. poglog index.js"));
 	process.exit(1);
 }
 const command = spawn("node", argv._);

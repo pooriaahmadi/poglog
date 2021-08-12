@@ -1,30 +1,5 @@
 {
-  "_from": "poglog",
-  "_id": "poglog@1.0.0",
-  "_inBundle": false,
-  "_integrity": "sha512-OKT1mU5Bz350/CoXTh4lxuDlyfM9n4DMdaCK1uZf+qsok56AuZCGvRK1ycqy//PgdlCb3NC5PhALcOs6dAAG7w==",
-  "_location": "/poglog",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "poglog",
-    "name": "poglog",
-    "escapedName": "poglog",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
-  },
-  "_requiredBy": [
-    "#USER"
-  ],
-  "_resolved": "https://registry.npmjs.org/poglog/-/poglog-1.0.0.tgz",
-  "_shasum": "1358e89347346a78e0d4674483cca1e73800fcbb",
-  "_spec": "poglog",
-  "_where": "C:\\Users\\ASUS",
-  "author": {
-    "name": "Pooria Ahmadi"
-  },
+  "author": "Pooria Ahmadi",
   "bin": {
     "poglog": "bin/index.js",
     "poglog-client": "bin/client.js"
@@ -32,7 +7,6 @@
   "bugs": {
     "url": "https://github.com/pooriaahmadi/poglog/issues"
   },
-  "bundleDependencies": false,
   "dependencies": {
     "blessed": "^0.1.81",
     "blessed-contrib": "^4.10.1",
@@ -44,7 +18,6 @@
     "systeminformation": "^5.8.0",
     "yargs": "^17.1.0"
   },
-  "deprecated": false,
   "description": "A CLI for monitoring a script logs through sockets",
   "devDependencies": {
     "@types/blessed": "^0.1.19",
@@ -74,7 +47,7 @@
     "url": "git+https://github.com/pooriaahmadi/poglog.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"No test specified\""
   },
   "version": "1.0.0"
 }

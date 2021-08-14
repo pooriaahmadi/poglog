@@ -25,6 +25,11 @@ const argv = yargs
 		default: 6754,
 		type: "number",
 	})
+	.option("engine", {
+		description: "Compiler Engine: ex. node, python, java",
+		default: "node",
+		type: "string",
+	})
 	.help()
 	.alias("help", "h").argv;
 
@@ -32,7 +37,6 @@ if (!argv._.length) {
 	console.log(chalk.redBright("Please provide filepath. Ex. poglog index.js"));
 	process.exit(1);
 }
-const command = spawn("node", argv._);
 
 const app = async () => {
 	console.log(chalk.greenBright("Getting things ready..."));
@@ -43,7 +47,7 @@ const app = async () => {
 		title: `PogLog-server`,
 	});
 	screen.create(systemInformation);
-	const command = spawn("node", argv._);
+	const command = spawn(argv.engine, argv._);
 	command.stdout.on("data", (chunk) => {
 		const dateTime = getDate();
 		const log = String(chunk).substr(0, chunk.length - 1);
